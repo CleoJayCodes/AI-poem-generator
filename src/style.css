@@ -24,19 +24,22 @@ h1 {
   text-align: center;
 }
 
-form {
+.form-container {
   padding: 30px;
   background-color: #e8e0d2b5;
   box-shadow: 0px 20px 30px #bbb4a899;
   border-radius: 5px;
-  display: flex;
+  padding-bottom: 10px;
   margin-bottom: 30px;
+}
+form {
+  display: flex;
 }
 
 .instructions {
   padding: 16px;
   border: 1px solid #c1b9aaca;
-  width: 80%;
+  width: 90%;
   font-size: 15px;
   border-radius: 5px;
   line-height: 20px;
@@ -52,6 +55,18 @@ form {
   width: 100px;
 }
 
+.submit-button:hover {
+  cursor: pointer;
+}
+
+.hint {
+  line-height: 2;
+  font-family: "Krub", sans-serif;
+  color: #475d70a9;
+
+  font-size: 14px;
+}
+
 .poem {
   font-size: 16px;
   background-color: #fffdfae7;
@@ -64,10 +79,30 @@ form {
   color: #475d70;
 }
 
+.hidden {
+  display: none;
+}
+
 footer {
   text-align: center;
   font-size: 14px;
   margin-top: 30px;
   font-family: "Krub", sans-serif;
   color: #95856ab5;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 200px;
+  height: 20px;
+  background: linear-gradient(90deg, #0000, #f1efefc0) left -50px top 0/50px 20px
+    no-repeat #dbe4eb;
+  animation: l2 1s infinite linear;
+  text-align: center;
+  font-size: 20px;
+}
+@keyframes l2 {
+  100% {
+    background-position: right -50px top 0;
+  }
 }
